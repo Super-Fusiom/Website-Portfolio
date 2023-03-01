@@ -1,8 +1,7 @@
-ul {
+.navbar > ul {
   display: flex;
   justify-content: flex-end;
 }
-
-a {
+.navbar > ul > a {
   margin: 2rem;
 }
