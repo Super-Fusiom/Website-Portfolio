@@ -9,4 +9,4 @@ const contactMain = () => {
     )
 }
 
-export default contactMain
+export default contactMain;
