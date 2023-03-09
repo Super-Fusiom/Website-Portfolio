@@ -1,4 +1,4 @@
-import HomeSplash from "../components/homeSplash/homeSplash";
+import Projects from "../components/projectsMain/projectsMain";
 import { useEffect } from "react";
 import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <HomeSplash />
+      <Projects />
       <Footer />
     </>
   );

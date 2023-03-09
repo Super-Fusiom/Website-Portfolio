@@ -1,9 +1,9 @@
 import "./footer.css";
 
-export default function navbar() {
+export default function footer() {
   return (
     <footer>
-      <a href="https://www.youtube.com">L + Ratio + Bozo</a>
+      <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">L + Ratio + Bozo</a>
     </footer>
   );
 }
