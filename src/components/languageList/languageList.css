@@ -1,0 +1,13 @@
+.languages {
+  display: flex;
+  align-content: flex-start;
+  margin-left: 5rem;
+}
+
+.languages > ul {
+  color: wheat;
+}
+
+.languages > ul > li {
+  margin-top: 2rem;
+}

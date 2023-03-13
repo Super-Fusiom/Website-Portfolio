@@ -5,3 +5,10 @@
 .navbar > ul > a {
   margin: 2rem;
 }
+
+.navbar > img {
+  width: 10%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}

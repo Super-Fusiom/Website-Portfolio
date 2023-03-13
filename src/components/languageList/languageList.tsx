@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./lanaguageList.css";
+import "./languageList.css";
 
 interface Props {
   username: string;
 }
 
-const lanaguageList: React.FC<Props> = ({ username }) => {
+const languageList: React.FC<Props> = ({ username }) => {
   // Typing system for both variables
   const [languages, setLanguages] = useState<
     { name: string; percentage: number }[]
@@ -53,14 +53,16 @@ const lanaguageList: React.FC<Props> = ({ username }) => {
   }, [username]);
 
   return (
-    <ul>
-      {languages.map((language) => (
-        <li key={language.name}>
-          {language.name} - {language.percentage.toFixed(2)}%
-        </li>
-      ))}
-    </ul>
+    <div className="languages">
+      <ul>
+        {languages.map((language) => (
+          <li key={language.name}>
+            {language.name} - {language.percentage.toFixed(2)}%
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
-export default lanaguageList;
+export default languageList;
