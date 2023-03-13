@@ -7,7 +7,10 @@ interface Props {
 }
 
 const lanaguageList: React.FC<Props> = ({ username }) => {
-  const [languages, setLanguages] = useState<string[]>([]);
+  // Typing system for both variables
+  const [languages, setLanguages] = useState<
+    { name: string; percentage: number }[]
+  >([]);
 
   useEffect(() => {
     const apiUrl = `https://api.github.com/users/${username}/repos`;
@@ -16,25 +19,33 @@ const lanaguageList: React.FC<Props> = ({ username }) => {
       .get(apiUrl)
       .then((response) => {
         const repositories = response.data;
-        const languages: { [key: string]: number } = {};
+        const languageCounts: { [key: string]: number } = {};
 
         repositories.forEach((repository: any) => {
           const language = repository.language;
 
           if (language) {
-            if (language in languages) {
-              languages[language]++;
+            if (language in languageCounts) {
+              languageCounts[language]++;
             } else {
-              languages[language] = 1;
+              languageCounts[language] = 1;
             }
           }
         });
 
-        const sortedLanguages = Object.entries(languages)
-          .sort((a, b) => b[1] - a[1])
-          .map(([language]) => language);
+        const totalLanguages = Object.values(languageCounts).reduce(
+          (a, b) => a + b,
+          0
+        );
+        // Add and sort all languages
+        const languagePercentages = Object.entries(languageCounts)
+          .map(([language, count]) => ({
+            name: language,
+            percentage: (count / totalLanguages) * 100,
+          }))
+          .sort((a, b) => b.percentage - a.percentage);
 
-        setLanguages(sortedLanguages);
+        setLanguages(languagePercentages);
       })
       .catch((error) => {
         console.error(error);
@@ -44,7 +55,9 @@ const lanaguageList: React.FC<Props> = ({ username }) => {
   return (
     <ul>
       {languages.map((language) => (
-        <li key={language}>{language}</li>
+        <li key={language.name}>
+          {language.name} - {language.percentage.toFixed(2)}%
+        </li>
       ))}
     </ul>
   );
