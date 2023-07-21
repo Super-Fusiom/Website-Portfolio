@@ -6,6 +6,10 @@ interface Props {
   username: string;
 }
 
+interface IRepo {
+  language: string;
+}
+
 const languageList: React.FC<Props> = ({ username }) => {
   // Typing system for both variables
   const [languages, setLanguages] = useState<
@@ -20,8 +24,9 @@ const languageList: React.FC<Props> = ({ username }) => {
       .then((response) => {
         const repositories = response.data;
         const languageCounts: { [key: string]: number } = {};
+        console.log(repositories[0]);
 
-        repositories.forEach((repository: any) => {
+        repositories.forEach((repository: IRepo) => {
           const language = repository.language;
 
           if (language) {
@@ -50,7 +55,7 @@ const languageList: React.FC<Props> = ({ username }) => {
       .catch((error) => {
         console.error(error);
       });
-  }, [username]);
+  }, []);
 
   return (
     <div className="languages">

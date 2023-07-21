@@ -2,16 +2,23 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  background-color: black;
-  color: white;
+  background-color: var(--background);
+  color: var(--primary);
 }
 
 a {
   transition: color 300ms ease-in-out;
   text-decoration: none;
-  color: wheat;
+  color: var(--text);
 }
 
 a:hover {
-  color: white;
+  color: var(--accent);
+}
+:root {
+  --text: #fbf6f3;
+  --background: #0c0604;
+  --primary: #347fa8;
+  --secondary: #331c10;
+  --accent: #489ac7;
 }
