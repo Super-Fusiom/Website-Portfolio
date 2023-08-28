@@ -1,7 +1,8 @@
-.social > {
+.social {
   display: flex;
   flex: auto;
   flex-wrap: wrap;
   flex-flow: row;
   align-items: flex-start;
+  row-gap: 5rem;
 }
