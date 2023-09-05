@@ -11,3 +11,7 @@
 .languages > ul > li {
   margin-top: 2rem;
 }
+
+.languages > p {
+  color: wheat;
+}

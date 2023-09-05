@@ -11,6 +11,7 @@ interface IRepo {
 }
 
 const languageList: React.FC<Props> = ({ username }) => {
+  const [isLoading, setLoading] = useState(true);
   // Typing system for both variables
   const [languages, setLanguages] = useState<
     { name: string; percentage: number }[]
@@ -22,13 +23,12 @@ const languageList: React.FC<Props> = ({ username }) => {
     axios
       .get(apiUrl)
       .then((response) => {
+        setLoading(false);
         const repositories = response.data;
         const languageCounts: { [key: string]: number } = {};
-        console.log(repositories[0]);
 
         repositories.forEach((repository: IRepo) => {
           const language = repository.language;
-
           if (language) {
             if (language in languageCounts) {
               languageCounts[language]++;
@@ -56,6 +56,10 @@ const languageList: React.FC<Props> = ({ username }) => {
         console.error(error);
       });
   }, []);
+
+  if (isLoading) {
+    return <p className="languages">loading...</p>;
+  }
 
   return (
     <div className="languages">
