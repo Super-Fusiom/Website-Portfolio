@@ -1,4 +1,26 @@
-footer {
+footer > .content {
+  display: flex;
+  justify-content: left;
+  margin-left: 20rem;
+}
+
+footer > .br {
+  display: block;
+  height: 1rem;
+  background: #347fa8;
+  width: 100%;
+}
+
+footer > a {
   display: flex;
   justify-content: center;
+}
+footer > .content > .fcontact {
+  margin-top: 4rem;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 2rem;
+  flex-flow: row;
+  flex-basis: auto;
+  justify-content: left;
 }

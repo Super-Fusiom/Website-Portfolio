@@ -6,3 +6,7 @@
   align-items: flex-start;
   row-gap: 5rem;
 }
+
+.social > ul > li > a {
+  font-size: 10rem;
+}

@@ -1,0 +1,9 @@
+.aboutGrid {
+  display: flex;
+  flex-basis: auto;
+  gap: 40rem;
+}
+.aboutBox {
+  border: 10px solid ##347fa8;
+  border-radius: 5px;
+}

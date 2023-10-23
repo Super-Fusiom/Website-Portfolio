@@ -7,12 +7,12 @@ const topProjects = () => {
         <li>
           <h3 className="projectLink">
             <a href="https://www.github.com/Super-Fusiom/Arch-config">
-              My "Arch Linux" Configuration
+              My Linux Configuration
             </a>
           </h3>
           <p>
-            This can be used with any linux distrobution since it doesn't use
-            any Arch based dependancies
+            Although the setup script is used for arch based distrobutions, the
+            dot files can be used in any linux based distrobution.
           </p>
           <p>
             I do need to update this with a better neovim config and others.
