@@ -25,7 +25,7 @@ const topProjects = () => {
         <li>
           <h3 className="projectLink">
             <a href="https://github.com/Fuser-JS/Minder">
-              Minder\(My backend for my lister web app\)
+              Minder (My backend for my lister web app)
             </a>
           </h3>
           <p>
