@@ -17,12 +17,27 @@ const topProjects = () => {
           <p>
             I do need to update this with a better neovim config and others.
           </p>
+          <p>
+            I also clean up my home directory using xdg-ninja so that whenever I
+            list out my home directory, It stays clean.
+          </p>
         </li>
         <li>
-          <h3>
-            <a href=""></a>
+          <h3 className="projectLink">
+            <a href="https://github.com/Fuser-JS/Minder">
+              Minder\(My backend for my lister web app\)
+            </a>
           </h3>
-          <p></p>
+          <p>
+            This project is built using the go programming language with the gin
+            framework insted of python's FastAPI or javascript's node.js due to
+            how fast it returns a get request from a client.
+          </p>
+          <p>
+            Of course I'm still working on it and as such I can't really show
+            this as it doesn't work with the frontend but it still good for
+            testing speed.
+          </p>
         </li>
       </ul>
     </main>

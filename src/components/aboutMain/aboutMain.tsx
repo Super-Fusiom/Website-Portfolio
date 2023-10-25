@@ -13,8 +13,11 @@ const aboutMain = () => {
         </div>
         <div className="aboutBox">
           <h1>I'm not a good designer really but I can get stuff done</h1>
-          <p>I do like to do a lot of IT and programming in my free time.<br />
-          Most of my time is mainly networking and IT, however I do some programming on the side.
+          <p>
+            I do like to do a lot of IT and programming in my free time.
+            <br />
+            Most of my time is mainly networking and IT, however I do some
+            programming on the side.
           </p>
         </div>
       </div>
