@@ -40,6 +40,9 @@ const topProjects = () => {
           </p>
         </li>
       </ul>
+      <h2>
+        Of course there will be more projects that I'll feature in this page...
+      </h2>
     </main>
   );
 };
