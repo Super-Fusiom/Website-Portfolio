@@ -1,7 +1,6 @@
 footer > .content {
   display: flex;
-  justify-content: left;
-  margin-left: 20rem;
+  justify-content: center;
 }
 
 footer > .br {
@@ -20,7 +19,4 @@ footer > .content > .fcontact {
   display: flex;
   gap: 1.5rem;
   font-size: 2rem;
-  flex-flow: row;
-  flex-basis: auto;
-  justify-content: left;
 }
