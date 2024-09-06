@@ -6,8 +6,8 @@ const topProjects = () => {
       <ul>
         <li>
           <h3 className="projectLink">
-            <a href="https://www.github.com/Super-Fusiom/Arch-config">
-              My Linux Configuration
+            <a href="https://www.github.com/Super-Fusiom/dotfiles">
+              My Linux Configuration (dotfiles)
             </a>
           </h3>
           <p>
